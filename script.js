@@ -1,5 +1,4 @@
 
-
 function loaderWeatherData() {
     const cityName = document.getElementById('cityInput').value;
     const WEATHER_APP_API_KEY = 'fbd214bd854a4f43a51101146240807';
@@ -9,13 +8,17 @@ function loaderWeatherData() {
     fetch(url)
         .then(res => res.json())
         .then(data => {
-            addDatas(data)
+            addDatas(data);
         })
-        .catch(error => console.error('Error fetching weather data:', error))
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            addDatas({ error: { message: 'Failed to fetch weather data. Please try again later.' } });
+        })
         .finally(() => {
             loader.style.display = 'none';
-        })
+        });
 }
+
 
 
 function addDatas(datas) {
