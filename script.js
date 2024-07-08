@@ -1,7 +1,8 @@
 
 function loaderWeatherData() {
     const cityName = document.getElementById('cityInput').value;
-    const url = `https://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${cityName}`;
+    const API_KEY = 'fbd214bd854a4f43a51101146240807';
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityName}`;
     const loader = document.getElementById('loader');
     loader.style.display = 'block';
     fetch(url)
