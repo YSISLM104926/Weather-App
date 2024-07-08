@@ -30,10 +30,10 @@ const addDatas = (datas) => {
     {
         datas?.error?.message ?
             result.innerHTML = `
-        <p class="text-red-500 text-center">${datas?.error?.message}</p>
+        <p class="text-red-500 text-center font-bold backdrop-blur-lg">${datas?.error?.message}</p>
         `
             : result.innerHTML = `
-        <div class="flex justify-center gap-8 items-center backdrop-blur-sm p-12 rounded-lg ">
+        <div class="flex justify-center gap-8 items-center backdrop-blur-lg p-12 rounded-lg ">
         <div>
         <p class="font-bold text-5xl">${datas?.current?.temp_c}°</p>
             <p>Country: ${datas?.location?.name}</p>
