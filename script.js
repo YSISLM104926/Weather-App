@@ -1,6 +1,6 @@
 
 
-const LoaderWeatherData = () => {
+function loaderWeatherData() {
     const cityName = document.getElementById('cityInput').value;
     const WEATHER_APP_API_KEY = 'fbd214bd854a4f43a51101146240807';
     const url = `http://api.weatherapi.com/v1/current.json?key=${WEATHER_APP_API_KEY}&q=${cityName}`;
@@ -18,7 +18,7 @@ const LoaderWeatherData = () => {
 }
 
 
-const addDatas = (datas) => {
+function addDatas(datas) {
     console.log('dd', datas);
     // if (datas === error) {
     //     let check = document.getElementById('show');
