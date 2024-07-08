@@ -22,13 +22,7 @@ function loaderWeatherData() {
 
 
 function addDatas(datas) {
-    console.log('dd', datas);
-    // if (datas === error) {
-    //     let check = document.getElementById('show');
-    //     check.innerHTML = `
-    //        <h1 class="text-red-500">${datas?.error?.message}</h1>
-    //     `;
-    // } else {
+
     const result = document.getElementById('show');
     {
         datas?.error?.message ?
@@ -39,7 +33,7 @@ function addDatas(datas) {
         <div class="flex justify-center gap-8 items-center backdrop-blur-lg p-12 rounded-lg ">
         <div>
         <p class="font-bold text-5xl">${datas?.current?.temp_c}°</p>
-            <p>Country: ${datas?.location?.name}</p>
+            <p>City: ${datas?.location?.name}</p>
             <p class="font-bold">Country: ${datas?.location?.country}</p>
         </div>
             <div class="">
